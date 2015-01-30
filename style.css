@@ -1,0 +1,144 @@
+* {
+	padding:0;
+	margin:0;
+	border:0;
+}
+
+.top {
+	background-color:#CFC;
+	width:100%;
+	height:8.3em;
+}
+
+#logo {
+	float:left;
+}
+
+#titulo {
+	position:absolute;
+	font:4em "Rockwell";
+	margin-top:0.45em;
+	left:1.7em;
+}
+
+#descricao {
+	float:right;
+	padding:0.5em 1em 0.5em 0.5em;
+	margin-top:1.5em;
+	text-align:right;
+	font:1.1em "Rockwell";
+}
+
+div.content {
+	width:60em;
+	padding:0 1.46em;
+}
+
+div.content input, div.content select, div.content textarea {
+	border:0.1em solid rgba(190, 190, 190, 0.5);
+}
+
+section.principal, aside.sidebar {
+	background-color:#F1FAF1;
+	min-height:100%;
+}
+
+section.principal {
+	float:left;
+	width:70%;
+	padding:1em;
+}
+
+section.principal h1 {
+	font:2.5em "Rockwell";
+	margin-bottom:0.3em;
+}
+
+form fieldset {
+	border:0.1em solid rgba(190, 190, 190, 0.5);
+	padding:0.5em;
+}
+
+form fieldset legend {
+	font:1.3em "Rockwell";
+	margin-left:0.2em;
+	margin-bottom:0.2em;
+}
+
+form label {
+	font:1em "Rockwell";
+	float:left;
+	width:10em;
+}
+
+form input, form select {
+	height:1.5em;
+	margin:0.2em;
+}
+
+form#novo input[name="nome"], form#novo input[name="pai"], form#novo input[name="mae"] {
+	width:36em;
+}
+
+form#novo input[name="endereco"] {
+	width:19.3em;
+}
+
+form#novo input[name="naturalidade"], form#novo textarea[name="substancias"], form#novo input[name="certidao"], form#novo input[name="telefones"] {
+	width:24.4em;
+}
+
+.data {
+	width:4em;
+}
+
+form#novo input[name="rg"], form#novo input[name="orgaorg"] {
+	width:9.9em;
+}
+
+form#novo select[name="genero"], form#novo select[name="demanda"], form#novo input[name="cpf"], form#novo input[name="cns"], form#novo select[name="status"], form#novo input[name="cidade"], form#sprofissional select[name="profissional"] {
+	width:11.1em;
+}
+
+form#novo input[name="cep"] {
+	width:4.5em;
+}
+
+form textarea {
+	height:4em;
+	margin:0.2em;
+}
+
+
+form input.button {
+	font:1.05em "Rockwell";
+	padding:0.5em;
+	width:5em;
+	height:2.5em;
+	background-color:#CBEDCB;
+}
+
+form fieldset.buttons {
+	margin-left:14em;
+	border:none;
+}
+
+div.profissionais {
+	display:table-cell;
+	padding:0 1.5em 0 0;
+	font-family:"Calibri", Arial, sans-serif;
+}
+
+form#proced textarea[name="membros"] {
+	margin-left:12.3em;
+	width:25.8em;
+}
+
+form#proced textarea[name="outros"], form#proced select[name="procedimento"] {
+	width:25.8em;
+}
+
+aside.sidebar {
+	float:right;
+	width:30%;
+}
