@@ -63,7 +63,7 @@
 				
 				<div class="profissionais">
 				<?php
-				$sqlProf = mysql_query("SELECT * FROM profissionais WHERE cbo = '4110-10' OR cbo = '5153-15'");
+				$sqlProf = mysql_query("SELECT * FROM profissionais WHERE cbo = '4110-10' OR cbo = '5153-15' OR cbo = '5162-20' OR cbo = '2344-10'");
 				while ($linha = mysql_fetch_array($sqlProf)) {
 					$profissional = $linha['nome'];
 					echo "<input type='checkbox' name='profissionais[]' value='".$profissional."'>".$profissional;

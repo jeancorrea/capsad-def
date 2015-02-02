@@ -53,6 +53,8 @@ $sql = mysql_query("INSERT INTO pacientes (nome, dn, genero, endereco, cep, cida
 	VALUES ('$nome', '$dn', '$genero', '$endereco', '$cep', '$cidade', '$naturalidade', '$escola', '$telefones', '$pai', '$mae', '$rg', '$orgaorg', '$emissaorg', '$cpf', '$cns', '$certidao', '$demanda', '$cidp', '$cids', '$substancias', '$status', '$inicio')");
 if ($sql == true) {
 	echo "Dados cadastrados com sucesso!";
+	echo "<br />";
+	echo "<a href='novo.php'>Cadastrar novo paciente</a> | <a href='proced.php'>Cadastrar novo procedimento</a>";
 } else {
 	echo "Não foi possível cadastrar os dados. Favor contatar o administrador do banco de dados.";
 }
