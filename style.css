@@ -32,7 +32,7 @@
 div.content {
 	width:63.4em;
 	background-color:#F1FAF1;
-	margin:0 0 0 10em;
+	margin:0 0 0 9.2em;
 	overflow:hidden;
 	clear:both;
 }
@@ -43,6 +43,7 @@ div.content input, div.content select, div.content textarea {
 
 section.principal, aside.sidebar {
 	height:100%;
+	min-height:31.4em;
 }
 
 section.principal {
@@ -54,6 +55,7 @@ section.principal {
 section.principal h1 {
 	font:2.5em "Rockwell";
 	margin-bottom:0.3em;
+	font-weight:bold;
 }
 
 form fieldset {
