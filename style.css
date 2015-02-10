@@ -30,8 +30,11 @@
 }
 
 div.content {
-	width:60em;
-	padding:0 1.46em;
+	width:63.4em;
+	background-color:#F1FAF1;
+	margin:0 0 0 10em;
+	overflow:hidden;
+	clear:both;
 }
 
 div.content input, div.content select, div.content textarea {
@@ -39,8 +42,7 @@ div.content input, div.content select, div.content textarea {
 }
 
 section.principal, aside.sidebar {
-	background-color:#F1FAF1;
-	min-height:100%;
+	height:100%;
 }
 
 section.principal {
@@ -140,5 +142,33 @@ form#proced textarea[name="outros"], form#proced select[name="procedimento"] {
 
 aside.sidebar {
 	float:right;
-	width:30%;
+	width:16em;
+	font-family:"Rockwell";
+	padding:0 0.5em;
+	height:100%;
+}
+
+.menubar {
+	margin-top:1em;
+}
+
+ul.menu {
+	list-style:none;
+	padding: 0.5em 0;
+}
+
+ul.menu a {
+	text-decoration:none;
+	color:#000;
+}
+
+ul.menu h3 {
+	background-color:#CFC;
+	width:13em;
+	padding:0.2em 0 0.2em 0.4em;
+}
+
+ul.menu li {
+	margin-left:0.7em;
+	padding:0.1em;
 }
