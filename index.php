@@ -1,15 +1,12 @@
 <?php include "header.php"; ?>
-		<section>
-			<form action="do-teste.php" method="POST">
-				<?php
-					$sql = mysql_query("SELECT * FROM profissionais");
-					while ($linha = mysql_fetch_array($sql)) {
-						$profissional = $linha['nome'];
-						echo "<input type='checkbox' name='profissionais[]' value='".$profissional."'>".$profissional;
-						echo "<br />";
-					}
-				?>
-				<input type="submit" value="Enviar">
-			</form>
-		</section>
+<h1>CAPSad Digital</h1>
+
+<table class="grid">
+	<caption>Escolha a uma das funções abaixo</caption>
+	<tr>
+		<td><a href="novo.php"><img src="\capsad\img\user.png" class="icon" /></a></td>
+		<td><a href="proced.php"><img src="\capsad\img\book.png" class="icon" /></a></td>
+		<td><a href="#"><img src="\capsad\img\lupa.png" class="icon" /></a></td>
+		<td><a href="#"><img src="\capsad\img\cracha.png" class="icon" /></a></td>
+</table>
 <?php include "footer.php"; ?>

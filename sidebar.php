@@ -1,5 +1,5 @@
 <div class="menubar">
-	<ul class="menu"><h3><a href="#">Home</a></h3>
+	<ul class="menu"><h3><a href="/capsad">Home</a></h3>
 	</ul><!--menu-->
 	<ul class="menu"><h3>Pacientes</h3>
 		<li><a href="novo.php">Novo paciente</a></li>

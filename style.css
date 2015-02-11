@@ -47,7 +47,7 @@ section.principal, aside.sidebar {
 }
 
 section.principal {
-	float:left;
+	float:right;
 	width:70%;
 	padding:1em;
 }
@@ -56,6 +56,24 @@ section.principal h1 {
 	font:2.5em "Rockwell";
 	margin-bottom:0.3em;
 	font-weight:bold;
+}
+
+section.principal caption {
+	font:1.5em "Rockwell";
+	margin-bottom:0.3em;
+	font-weight:bold;
+}
+
+img.icon {
+	width:10em;
+}
+
+table.grid {
+	margin-left:1.5em;
+}
+
+table.grid td {
+	padding:0 0.1em;
 }
 
 form fieldset {
@@ -143,7 +161,7 @@ form#proced textarea[name="outros"], form#proced select[name="procedimento"] {
 }
 
 aside.sidebar {
-	float:right;
+	float:left;
 	width:16em;
 	font-family:"Rockwell";
 	padding:0 0.5em;
