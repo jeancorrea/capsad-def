@@ -58,7 +58,7 @@ section.principal h1 {
 	font-weight:bold;
 }
 
-section.principal caption {
+section.principal caption, section.principal h2 {
 	font:1.5em "Rockwell";
 	margin-bottom:0.3em;
 	font-weight:bold;

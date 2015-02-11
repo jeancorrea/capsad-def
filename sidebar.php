@@ -8,6 +8,6 @@
 	</ul><!--menu-->
 	<ul class="menu"><h3>Procedimentos</h3>
 		<li><a href="proced.php">Novo procedimento</a></li>
-		<li><a href="#">Consultar procedimentos</a></li>
+		<li><a href="consulta.php">Consultar procedimentos</a></li>
 	</ul><!--menu-->
 </div><!--menubar-->
