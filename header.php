@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="style.css" />
 	<script src="script.js"></script>
 	<script src="js/jquery.js"></script>
+	<script src="js/jquery.maskedinput.js"></script>
 	<link rel="icon" href="img/favicon.ico" />
 </head>
 

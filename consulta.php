@@ -1,4 +1,14 @@
 <?php include "header.php"; ?>
+
+<script>
+jQuery(function($){
+$("#dataInicial").mask("99/99/9999");
+$("#dataFinal").mask("99/99/9999");
+$("#campoTelefone").mask("(999) 999-9999");
+$("#campoSenha").mask("***-****");
+});
+</script>
+
 <h1>Consultar procedimentos</h1>
 <h2>Por paciente</h2>
 <form action="do_pac.php" method="POST" id="spac">
@@ -16,8 +26,8 @@
 			?>
 		</select><br />
 
-		<label>Mês</label>
-		<input type="text" name="mes" class="data"> / <input type="text" name="ano" class="data"><br />
+		<label>Data</label>
+		<input type="text" name="di" class="datacomp" id="dataInicial" required> / <input type="text" name="df" class="datacomp" id="dataFinal"><br />
 
 		<fieldset class="buttons">
 			<input type="submit" class="button" value="Enviar">&nbsp;<input type="reset" class="button" value="Limpar">

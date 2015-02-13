@@ -34,7 +34,7 @@ for ($x = 0; $x<$size; $x++) {
 	$sqlB = mysql_query("INSERT INTO atendimentos (atendimento, codigo, profissionais, outros, data, paciente) VALUES ('$procedimento', '$codigo', '$prof', '$outros', '$data', '$membro')");
 	}
 	if ($sqlB == true) {
-		echo "Dados cadastrados com sucesso!";
+		echo "<h2>Dados cadastrados com sucesso!</h2>";
 		echo "<br />";
 		echo "<a href='proced.php'>Cadastrar novo procedimento</a> | <a href='novo.php'>Cadastrar novo paciente</a>";
 	} else {

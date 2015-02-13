@@ -114,6 +114,10 @@ form#novo input[name="naturalidade"], form#novo textarea[name="substancias"], fo
 	width:4em;
 }
 
+.datacomp {
+	width:12.2em;
+}
+
 form#novo input[name="rg"], form#novo input[name="orgaorg"] {
 	width:9.9em;
 }
@@ -191,4 +195,16 @@ ul.menu h3 {
 ul.menu li {
 	margin-left:0.7em;
 	padding:0.1em;
+}
+
+table.resultado, table.resultado th, table.resultado td {
+	text-align:center;
+	border:solid 2px #081600;
+	width:43.7em;
+	border-collapse:collapse;
+	font-family:"Rockwell";
+}
+
+table.resultado th, table.resultado td {
+	padding:0.5em;
 }
