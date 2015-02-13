@@ -27,7 +27,7 @@ $("#campoSenha").mask("***-****");
 		</select><br />
 
 		<label>Data</label>
-		<input type="text" name="di" class="datacomp" id="dataInicial" required> / <input type="text" name="df" class="datacomp" id="dataFinal"><br />
+		<input type="text" name="di" class="datacomp" id="dataInicial" required> <span style="font-family:'Rockwell';">a</span> <input type="text" name="df" class="datacomp" id="dataFinal"><br />
 
 		<fieldset class="buttons">
 			<input type="submit" class="button" value="Enviar">&nbsp;<input type="reset" class="button" value="Limpar">
