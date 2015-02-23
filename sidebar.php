@@ -10,4 +10,8 @@
 		<li><a href="proced.php">Novo procedimento</a></li>
 		<li><a href="consulta.php">Consultar procedimentos</a></li>
 	</ul><!--menu-->
+	<ul class="menu"><h3>Links úteis</h3>
+		<li><a href="http://localhost/phpmyadmin" target="_BLANK">phpMyAdmin</a></li>
+		<li><a href="http://sistemas.macae.rj.gov.br:82/apps/oficiodigital/default.asp" target="_BLANK">Ofício Digital</a></li>
+	</ul>
 </div><!--menubar-->

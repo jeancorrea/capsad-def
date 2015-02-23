@@ -1,5 +1,6 @@
 <?php include "header.php"; ?>
 
+<div class="retorno">
 <?php
 
 //Definição de variáveis POST
@@ -23,12 +24,6 @@ for ($x = 0; $x<$size; $x++) {
 	$membro = $array[$x];
 	$membro = str_replace("'","\\'",$membro);
 	
-	/*echo $procedimento."<br />";
-	echo $codigo."<br />";
-	echo $prof."<br />";
-	echo $outros."<br />";
-	echo $data."<br />";
-	echo $membro."<br /><br />";*/
 
 	
 	$sqlB = mysql_query("INSERT INTO atendimentos (atendimento, codigo, profissionais, outros, data, paciente) VALUES ('$procedimento', '$codigo', '$prof', '$outros', '$data', '$membro')");
@@ -44,4 +39,5 @@ for ($x = 0; $x<$size; $x++) {
 
 
 ?>
+</div><!--retorno-->
 <?php include "footer.php"; ?>

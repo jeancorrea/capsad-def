@@ -64,6 +64,12 @@ section.principal caption, section.principal h2 {
 	font-weight:bold;
 }
 
+div.retorno a {
+	font:1.05em "Rockwell";
+	text-decoration:none;
+	color:#000;
+}
+
 img.icon {
 	width:10em;
 }
@@ -134,7 +140,6 @@ form textarea {
 	height:4em;
 	margin:0.2em;
 }
-
 
 form input.button {
 	font:1.05em "Rockwell";

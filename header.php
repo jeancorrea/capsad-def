@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<title>CAPSad Digital</title>
 	<link rel="stylesheet" href="style.css" />
+	<!--<link rel="stylesheet" href="normalize.css" />-->
 	<script src="script.js"></script>
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.maskedinput.js"></script>

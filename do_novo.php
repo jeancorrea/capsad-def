@@ -1,5 +1,5 @@
 <?php include "header.php"; ?>
-
+<div class="retorno">
 <?php
 
 //Definição de variáveis POST
@@ -59,4 +59,5 @@ if ($sql == true) {
 	echo "Não foi possível cadastrar os dados. Favor contatar o administrador do banco de dados.";
 }
 ?>
+</div><!--retorno-->
 <?php include "footer.php"; ?>
