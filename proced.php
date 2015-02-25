@@ -19,7 +19,7 @@
 		<label>Profissionais</label>
 				<div class="profissionais">
 				<?php
-				$sqlProf = mysql_query("SELECT * FROM profissionais WHERE cbo = '2515-10'");
+				$sqlProf = mysql_query("SELECT * FROM profissionais WHERE cbo = '2515-10' ORDER BY nome");
 				while ($linha = mysql_fetch_array($sqlProf)) {
 					$profissional = $linha['nome'];
 					echo "<input type='checkbox' name='profissionais[]' value='".$profissional."'>".$profissional;
@@ -30,7 +30,7 @@
 				
 				<div class="profissionais">
 				<?php
-				$sqlProf = mysql_query("SELECT * FROM profissionais WHERE cbo = '2516-05'");
+				$sqlProf = mysql_query("SELECT * FROM profissionais WHERE cbo = '2516-05' ORDER BY nome");
 				while ($linha = mysql_fetch_array($sqlProf)) {
 					$profissional = $linha['nome'];
 					echo "<input type='checkbox' name='profissionais[]' value='".$profissional."'>".$profissional;
@@ -41,7 +41,7 @@
 				
 				<div class="profissionais">
 				<?php
-				$sqlProf = mysql_query("SELECT * FROM profissionais WHERE cbo = '2251-33'");
+				$sqlProf = mysql_query("SELECT * FROM profissionais WHERE cbo = '2251-33' ORDER BY nome");
 				while ($linha = mysql_fetch_array($sqlProf)) {
 					$profissional = $linha['nome'];
 					echo "<input type='checkbox' name='profissionais[]' value='".$profissional."'>".$profissional;
@@ -52,7 +52,7 @@
 				
 				<div class="profissionais">
 				<?php
-				$sqlProf = mysql_query("SELECT * FROM profissionais WHERE cbo = '2235-05' OR cbo = '3222-30'");
+				$sqlProf = mysql_query("SELECT * FROM profissionais WHERE cbo = '2235-05' OR cbo = '3222-30' ORDER BY nome");
 				while ($linha = mysql_fetch_array($sqlProf)) {
 					$profissional = $linha['nome'];
 					echo "<input type='checkbox' name='profissionais[]' value='".$profissional."'>".$profissional;
@@ -63,7 +63,7 @@
 				
 				<div class="profissionais">
 				<?php
-				$sqlProf = mysql_query("SELECT * FROM profissionais WHERE cbo = '4110-10' OR cbo = '5153-15' OR cbo = '2344-10'");
+				$sqlProf = mysql_query("SELECT * FROM profissionais WHERE cbo = '4110-10' OR cbo = '5153-15' OR cbo = '2344-10' ORDER BY nome");
 				while ($linha = mysql_fetch_array($sqlProf)) {
 					$profissional = $linha['nome'];
 					echo "<input type='checkbox' name='profissionais[]' value='".$profissional."'>".$profissional;
