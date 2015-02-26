@@ -39,11 +39,6 @@ while ($linha = mysql_fetch_array($busca)) {
 	echo "</tr>";
 	echo "</table><!--resultado-->";
 	echo "<br />";
-
-	/*echo "<strong>";
-	echo $nome." - prontuário nº ".$id."-".$idade."<br />";
-	echo $cns." - ".$substancias." - ".$inicio."<br /><br />";
-	echo "</strong>";*/
 }
 
 ?>
@@ -102,18 +97,6 @@ if (empty($df)) {
 	}
 }
 
-/*MySQL Query
-$sql = mysql_query("SELECT * FROM atendimentos WHERE paciente = '$paciente' ORDER BY data");
-while ($linha = mysql_fetch_array($sql)) {
-	$atendimento = $linha['atendimento'];
-	$codigo = $linha['codigo'];
-	$profissionais = $linha['profissionais'];
-	$outros = $linha['outros'];
-	$data = $linha['data'];
-
-	echo $atendimento." - ".$codigo." - ".$profissionais." - ".$outros." - ".$data."<br /><br />";
-}
-*/
 ?>
 </table>
 
