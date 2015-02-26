@@ -6,7 +6,7 @@
 	<fieldset>
 	<legend>Consulta por profissional</legend>
 		<label>Profissional</label>
-		<select name="profissional">
+		<select name="profissional" class="inputPequeno">
 			<option></option>
 				<?php
 				$sqlProf = mysql_query("SELECT * FROM profissionais ORDER BY nome");

@@ -5,7 +5,7 @@
 <form action="do_proced.php" method="POST" id="proced">
 	<fieldset>
 		<label>Procedimento</label>
-		<select name="procedimento">
+		<select name="procedimento" class="inputLongo">
 			<option></option>
 				<?php
 				$sqlProced = mysql_query("SELECT * FROM procedimentos");
@@ -74,7 +74,7 @@
 		<br />
 
 		<label>Outros profissionais</label>
-		<textarea name="outros"></textarea><br />
+		<textarea name="outros" class="inputLongo"></textarea><br />
 
 		<label>Data</label>
 		<input type="text" name="dp_d" class="data"> / <input type="text" name="dp_m" class="data"> / <input type="text" name="dp_a" class="data"><br />
@@ -91,7 +91,7 @@
 				}
 				?>
 		</select><!--pacientes--><br />
-		<textarea id="membros" name="membros"></textarea>
+		<textarea id="membros" name="membros" class="inputMaior"></textarea>
 	</fieldset>
 
 	<fieldset class="buttons">

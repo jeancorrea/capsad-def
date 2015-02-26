@@ -6,23 +6,23 @@
 		<fieldset>
 		<legend>Identificação</legend>
 			<label>Nome do paciente</label>
-			<input type="text" name="nome" autofocus><br />
+			<input type="text" name="nome" class="inputNome" autofocus><br />
 
 			<label>Data de nascimento</label>
 			<input type="text" name="dn_d" class="data"> / <input type="text" name="dn_m" class="data"> / <input type="text" name="dn_a" class="data"><br />
 
 			<label>Gênero</label>
-			<select name="genero">
+			<select name="genero" class="inputPequeno">
 				<option></option>
 				<option>Masculino</option>
 				<option>Feminino</option>
 			</select><!--genero--><br />
 
 			<label>Endereço</label>
-			<input type="text" name="endereco" placeholder="Rua, avenida etc"><input type="text" name="cep" placeholder="CEP"><input type="text" name="cidade" placeholder="Cidade"><br />
+			<input type="text" name="endereco" class="inputMedio" placeholder="Rua, avenida etc"><input type="text" name="cep" class="inputMinimo" placeholder="CEP"><input type="text" name="cidade" class="inputPequeno" placeholder="Cidade"><br />
 
 			<label>Naturalidade</label>
-			<input type="text" name="naturalidade"><br />
+			<input type="text" name="naturalidade" class="inputGrande"><br />
 
 			<label>Escolaridade</label>
 			<select name="escola">
@@ -41,37 +41,37 @@
 			</select><!--escola--><br />
 
 			<label>Telefones</label>
-			<input type="text" name="telefones"><br />
+			<input type="text" name="telefones" class="inputGrande"><br />
 		</fieldset>
 
 		<fieldset>
 		<legend>Filiação</legend>
 			<label>Pai</label>
-			<input type="text" name="pai"><br />
+			<input type="text" name="pai" class="inputNome"><br />
 
 			<label>Mãe</label>
-			<input type="text" name="mae"><br />
+			<input type="text" name="mae" class="inputNome"><br />
 		</fieldset>
 
 		<fieldset>
 		<legend>Documentação</legend>
 			<label>Identidade</label>
-			<input type="text" name="rg" placeholder="Número"><input type="text" name="orgaorg" placeholder="Órgão expedidor"><input type="text" name="de_d" class="data" placeholder="Data"> / <input type="text" name="de_m" class="data" placeholder="de"> / <input type="text" class="data" name="de_a" placeholder="emissão"><br />
+			<input type="text" name="rg" class="inputMenor" placeholder="Número"><input type="text" name="orgaorg" class="inputMenor" placeholder="Órgão expedidor"><input type="text" name="de_d" class="data" placeholder="Data"> / <input type="text" name="de_m" class="data" placeholder="de"> / <input type="text" class="data" name="de_a" placeholder="emissão"><br />
 
 			<label>CPF</label>
-			<input type="text" name="cpf"><br />
+			<input type="text" name="cpf" class="inputPequeno"><br />
 
 			<label>Cartão SUS</label>
-			<input type="text" name="cns"><br />
+			<input type="text" name="cns" class="inputPequeno"><br />
 
 			<label>Certidão</label>
-			<input type="text" name="certidao"><br />
+			<input type="text" name="certidao" class="inputGrande"><br />
 		</fieldset>
 
 		<fieldset>
 		<legend>Informações adicionais</legend>
 			<label>Demanda</label>
-			<select name="demanda">
+			<select name="demanda" class="inputPequeno">
 				<option></option>
 				<option>Adolescente</option>
 				<option>DQ</option>
@@ -79,13 +79,13 @@
 			</select><!--demanda--><br />
 
 			<label>Substâncias</label>
-			<textarea name="substancias" placeholder="Separe os nomes das substâncias por vírgulas"></textarea><br />
+			<textarea name="substancias" class="inputGrande" placeholder="Separe os nomes das substâncias por vírgulas"></textarea><br />
 
 			<label>CIDs</label>
 			<input type="text" name="cidp" placeholder="Primário"><input type="text" name="cids" placeholder="Secundário"><br />
 
 			<label>Status</label>
-			<select name="status">
+			<select name="status" class="inputPequeno">
 				<option></option>
 				<option>Arquivo corrente</option>
 				<option>Arquivo morto</option>

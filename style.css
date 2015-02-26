@@ -104,15 +104,15 @@ form input, form select {
 	margin:0.2em;
 }
 
-form#novo input[name="nome"], form#novo input[name="pai"], form#novo input[name="mae"] {
+.inputNome {
 	width:36em;
 }
 
-form#novo input[name="endereco"] {
+.inputMedio {
 	width:19.3em;
 }
 
-form#novo input[name="naturalidade"], form#novo textarea[name="substancias"], form#novo input[name="certidao"], form#novo input[name="telefones"] {
+.inputGrande {
 	width:24.4em;
 }
 
@@ -124,15 +124,15 @@ form#novo input[name="naturalidade"], form#novo textarea[name="substancias"], fo
 	width:12.2em;
 }
 
-form#novo input[name="rg"], form#novo input[name="orgaorg"] {
+.inputMenor {
 	width:9.9em;
 }
 
-form#novo select[name="genero"], form#novo select[name="demanda"], form#novo input[name="cpf"], form#novo input[name="cns"], form#novo select[name="status"], form#novo input[name="cidade"], form#sprofissional select[name="profissional"] {
+.inputPequeno {
 	width:11.1em;
 }
 
-form#novo input[name="cep"] {
+.inputMinimo {
 	width:4.5em;
 }
 
@@ -160,12 +160,12 @@ div.profissionais {
 	font-family:"Calibri", Arial, sans-serif;
 }
 
-form#proced textarea[name="membros"] {
+.inputMaior {
 	margin-left:12.3em;
 	width:25.8em;
 }
 
-form#proced textarea[name="outros"], form#proced select[name="procedimento"] {
+.inputLongo {
 	width:25.8em;
 }
 

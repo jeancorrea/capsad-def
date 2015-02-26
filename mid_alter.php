@@ -11,37 +11,72 @@ $antid = $array[1];
 
 <form action="do_alter.php" method="POST" id="mid_alter">
 	<fieldset>
-		<label>Nome</label>
-		<input type="text" name="antnome" value="<?php echo $antnome; ?>"><br />
-
-		<label>Prontuário</label>
-		<input type="text" name="antid" value="<?php echo $antid; ?>"><br />
+		<label><?php echo $antnome; ?>  <?php echo $antid; ?></label>
+		<input type="hidden" name="antnome" value="<?php echo $antnome; ?>">
+		<input type="hidden" name="antid" value="<?php echo $antid; ?>"><br />
 	</fieldset>
+
+<?php
+
+$sql = mysql_query ("SELECT * FROM pacientes WHERE nome = '$antnome' AND id = '$antid'");
+while ($linha = mysql_fetch_array($sql)) {
+	$id = $linha['id'];
+	$nome = $linha['nome'];
+	$dn = $linha['dn'];
+	$datanasc = explode("-", $dn);
+	$genero = $linha['genero'];
+	$endereco = $linha['endereco'];
+	$cep = $linha['cep'];
+	$cidade = $linha['cidade'];
+	$escola = $linha['escola'];
+	$telefones = $linha['telefones'];
+	$pai = $linha['pai'];
+	$mae = $linha['mae'];
+	$cns = $linha['cns'];
+	$rg = $linha['rg'];
+	$orgaorg = $linha['orgaorg'];
+	$emissaorg = $linha['emissaorg'];
+	$dataemissao = explode("-", $emissaorg);
+	$cpf = $linha['cpf'];
+	$naturalidade = $linha['naturalidade'];
+	$certidao = $linha['certidao'];
+	$demanda = $linha['demanda'];
+	$substancias = $linha['substancias'];
+	$cidp = $linha['cidp'];
+	$cids = $linha['cids'];
+	$inicio = $linha['inicio'];
+	$datainicio = explode("-", $inicio);
+	$status = $linha['status'];
+
+?>
 
 	<fieldset>
 		<legend>Identificação</legend>
 			<label>Nome do paciente</label>
-			<input type="text" name="nome" autofocus><br />
+			<input type="text" name="nome" value="<?php echo $nome; ?>" class="inputNome" autofocus><br />
+
+			<label>Prontuário</label>
+			<input type="text" name="id" value="<?php echo $id; ?>"><br />
 
 			<label>Data de nascimento</label>
-			<input type="text" name="dn_d" class="data"> / <input type="text" name="dn_m" class="data"> / <input type="text" name="dn_a" class="data"><br />
+			<input type="text" name="dn_d" class="data" value="<?php echo $datanasc[2]; ?>"> / <input type="text" name="dn_m" class="data" value="<?php echo $datanasc[1]; ?>"> / <input type="text" name="dn_a" class="data" value="<?php echo $datanasc[0]; ?>"><br />
 
 			<label>Gênero</label>
-			<select name="genero">
-				<option></option>
+			<select name="genero" class="inputPequeno">
+				<option><?php echo $genero; ?></option>
 				<option>Masculino</option>
 				<option>Feminino</option>
 			</select><!--genero--><br />
 
 			<label>Endereço</label>
-			<input type="text" name="endereco" placeholder="Rua, avenida etc"><input type="text" name="cep" placeholder="CEP"><input type="text" name="cidade" placeholder="Cidade"><br />
+			<input type="text" name="endereco" value="<?php echo $endereco; ?>" class="inputMedio" placeholder="Rua, avenida etc"><input type="text" name="cep" class="inputMinimo" value="<?php echo $cep; ?>" placeholder="CEP"><input type="text" name="cidade" class="inputPequeno" value="<?php echo $cidade; ?>" placeholder="Cidade"><br />
 
 			<label>Naturalidade</label>
-			<input type="text" name="naturalidade"><br />
+			<input type="text" name="naturalidade" class="inputGrande" value="<?php echo $naturalidade; ?>"><br />
 
 			<label>Escolaridade</label>
 			<select name="escola">
-				<option></option>
+				<option><?php echo $escola; ?></option>
 				<option>Analfabeto</option>
 				<option>Ensino Fundamental incompleto</option>
 				<option>Ensino Fundamental completo</option>
@@ -56,59 +91,61 @@ $antid = $array[1];
 			</select><!--escola--><br />
 
 			<label>Telefones</label>
-			<input type="text" name="telefones"><br />
+			<input type="text" name="telefones" class="inputGrande" value="<?php echo $telefones; ?>"><br />
 		</fieldset>
 
 		<fieldset>
 		<legend>Filiação</legend>
 			<label>Pai</label>
-			<input type="text" name="pai"><br />
+			<input type="text" name="pai" class="inputNome" value="<?php echo $pai; ?>"><br />
 
 			<label>Mãe</label>
-			<input type="text" name="mae"><br />
+			<input type="text" name="mae" class="inputNome" value="<?php echo $mae; ?>"><br />
 		</fieldset>
 
 		<fieldset>
 		<legend>Documentação</legend>
 			<label>Identidade</label>
-			<input type="text" name="rg" placeholder="Número"><input type="text" name="orgaorg" placeholder="Órgão expedidor"><input type="text" name="de_d" class="data" placeholder="Data"> / <input type="text" name="de_m" class="data" placeholder="de"> / <input type="text" class="data" name="de_a" placeholder="emissão"><br />
+			<input type="text" name="rg" class="inputMenor" value="<?php echo $rg; ?>" placeholder="Número"><input type="text" name="orgaorg" class="inputMenor" value="<?php echo $orgaorg; ?>" placeholder="Órgão expedidor"><input type="text" name="de_d" class="data" value="<?php echo $dataemissao[2]; ?>" placeholder="Data"> / <input type="text" name="de_m" class="data" value="<?php echo $dataemissao[1]; ?>" placeholder="de"> / <input type="text" class="data" name="de_a" value="<?php echo $dataemissao[0]; ?>" placeholder="emissão"><br />
 
 			<label>CPF</label>
-			<input type="text" name="cpf"><br />
+			<input type="text" name="cpf" class="inputPequeno" value="<?php echo $cpf; ?>"><br />
 
 			<label>Cartão SUS</label>
-			<input type="text" name="cns"><br />
+			<input type="text" name="cns" class="inputPequeno" value="<?php echo $cns; ?>"><br />
 
 			<label>Certidão</label>
-			<input type="text" name="certidao"><br />
+			<input type="text" name="certidao" class="inputGrande" value="<?php echo $certidao; ?>"><br />
 		</fieldset>
 
 		<fieldset>
 		<legend>Informações adicionais</legend>
 			<label>Demanda</label>
-			<select name="demanda">
-				<option></option>
+			<select name="demanda" class="inputPequeno">
+				<option><?php echo $demanda; ?></option>
 				<option>Adolescente</option>
 				<option>DQ</option>
 				<option>Familiar</option>
 			</select><!--demanda--><br />
 
 			<label>Substâncias</label>
-			<textarea name="substancias" placeholder="Separe os nomes das substâncias por vírgulas"></textarea><br />
+			<textarea name="substancias" class="inputGrande" placeholder="Separe os nomes das substâncias por vírgulas"><?php echo $substancias; ?></textarea><br />
 
 			<label>CIDs</label>
-			<input type="text" name="cidp" placeholder="Primário"><input type="text" name="cids" placeholder="Secundário"><br />
+			<input type="text" name="cidp" value="<?php echo $cidp; ?>" placeholder="Primário"><input type="text" name="cids" value="<?php echo $cids; ?>" placeholder="Secundário"><br />
 
 			<label>Status</label>
-			<select name="status">
-				<option></option>
+			<select name="status" class="inputPequeno">
+				<option><?php echo $status; ?></option>
 				<option>Arquivo corrente</option>
 				<option>Arquivo morto</option>
 			</select><!--status--><br />
 
 			<label>Início do tratamento</label>
-			<input type="text" name="di_d" class="data"> / <input type="text" name="di_m" class="data"> / <input type="text" name="di_a" class="data"><br />
+			<input type="text" name="di_d" value="<?php echo $datainicio[2]; ?>" class="data"> / <input type="text" name="di_m" value="<?php echo $datainicio[1]; ?>" class="data"> / <input type="text" name="di_a" value="<?php echo $datainicio[0]; ?>" class="data"><br />
 		</fieldset>
+
+<?php } ?>
 
 	<fieldset class="buttons">
 		<input type="submit" class="button" value="Enviar">&nbsp;<input type="reset" class="button" value="Limpar">
