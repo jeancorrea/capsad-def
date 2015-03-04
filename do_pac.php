@@ -57,7 +57,7 @@ if (empty($df)) {
 	$exi = explode("/", $di);
 	$inicial = $exi[2]."-".$exi[1]."-".$exi[0];
 
-	$sql = mysql_query("SELECT * FROM atendimentos WHERE paciente = '$paciente' AND data = '$inicial' ORDER BY data");
+	$sql = mysql_query("SELECT * FROM atendimentos WHERE paciente = '$paciente' AND data = '$inicial' ORDER BY data, atendimento");
 	while ($linha = mysql_fetch_array($sql)) {
 		$atendimento = $linha['atendimento'];
 		$codigo = $linha['codigo'];
@@ -79,7 +79,7 @@ if (empty($df)) {
 	$exf = explode("/", $df);
 	$final = $exf[2]."-".$exf[1]."-".$exf[0];
 
-	$sql = mysql_query("SELECT * FROM atendimentos WHERE paciente = '$paciente' AND data BETWEEN '$inicial' AND '$final' ORDER BY data");
+	$sql = mysql_query("SELECT * FROM atendimentos WHERE paciente = '$paciente' AND data BETWEEN '$inicial' AND '$final' ORDER BY data, atendimento");
 	while ($linha = mysql_fetch_array($sql)) {
 		$atendimento = $linha['atendimento'];
 		$codigo = $linha['codigo'];
