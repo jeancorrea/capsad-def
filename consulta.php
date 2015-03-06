@@ -63,18 +63,18 @@ $("#campoSenha").mask("***-****");
 		</fieldset><!--buttons-->
 </form><!--sprof-->
 
-<h2>Por profissional</h2>
+<h2>Por procedimento</h2>
 <form action="do_proc.php" method="POST" id="sproc">
 	<fieldset>
 		<label>Procedimento</label>
-		<select name="procedimento" class="inputGrande">
+		<select name="procedimento" class="inputLongo">
 			<option></option>
 			<?php
 				$sqlProc = mysql_query("SELECT * FROM procedimentos ORDER BY id");
 				while ($linha = mysql_fetch_array($sqlProc)) {
 					$codigo = $linha['codigo'];
 					$procedimento = $linha['procedimento'];
-					echo "<option>".$procedimento."-".$id."</option>";
+					echo "<option>".$procedimento."-".$codigo."</option>";
 				}
 			?>
 		</select><br />

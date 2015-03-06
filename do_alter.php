@@ -1,5 +1,5 @@
 <?php include "header.php"; ?>
-
+<div class="retorno">
 <?php
 
 $antnome = $_POST['antnome'];
@@ -56,12 +56,14 @@ $cod1 = mysql_query("UPDATE pacientes SET id = '$id', nome = '$nome', dn = '$dn'
 $cod2 = mysql_query("UPDATE atendimentos SET paciente = '$nome-$id' WHERE paciente = '$antnome-$antid'");
 
 if ($cod1 == true && $cod2 == true) {
-	echo "Dados atualizados com sucesso!";
+	echo "<h2>Dados cadastrados com sucesso!</h2>";
+	echo "<br />";
+	echo "<a href='alter.php'>Atualizar outro paciente</a> | <a href='proced.php'>Cadastrar novo procedimento</a>";
 } else {
 	echo "Não foi possível cadastrar os dados. Favor contatar o administrador do banco de dados.";
 }
 
 
 ?>
-
+</div><!--retorno-->
 <?php include "footer.php"; ?>
