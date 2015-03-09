@@ -8,6 +8,8 @@ $("#diProf").mask("99/99/9999");
 $("#dfProf").mask("99/99/9999");
 $("#diProc").mask("99/99/9999");
 $("#dfProc").mask("99/99/9999");
+$("#diData").mask("99/99/9999");
+$("#dfdata").mask("99/99/9999");
 $("#campoTelefone").mask("(999) 999-9999");
 $("#campoSenha").mask("***-****");
 });
@@ -81,11 +83,23 @@ $("#campoSenha").mask("***-****");
 
 		<label>Data</label>
 		<input type="text" name="di" class="datacomp" id="diProc" required> <span style="font-family:'Rockwell';">a</span> <input type="text" name="df" class="datacomp" id="dfProc"><br />
-	</fieldset>	
+	</fieldset>
 
 		<fieldset class="buttons">
 			<input type="submit" class="button" value="Enviar">&nbsp;<input type="reset" class="button" value="Limpar">
 		</fieldset><!--buttons-->
 </form><!--spac-->
+
+<h2>Por período</h2>
+<form action="do_data.php" method="POST" id="sdata">
+	<fieldset>
+		<label>Data</label>
+		<input type="text" name="di" class="datacomp" id="diData" required> <span style="font-family:'Rockwell';">a</span> <input type="text" name="df" class="datacomp" id="dfdata"><br />
+	</fieldset>
+
+	<fieldset class="buttons">
+		<input type="submit" class="button" value="Enviar">&nbsp;<input type="reset" class="button" value="Limpar">
+	</fieldset><!--buttons-->
+</form><!--sdata-->
 
 <?php include "footer.php"; ?>
