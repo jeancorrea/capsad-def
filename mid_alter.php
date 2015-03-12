@@ -128,8 +128,9 @@ while ($linha = mysql_fetch_array($sql)) {
 				<option>Familiar</option>
 			</select><!--demanda--><br />
 
-			<label>Substâncias</label>
-			<textarea name="substancias" class="inputGrande" placeholder="Separe os nomes das substâncias por vírgulas"><?php echo $substancias; ?></textarea><br />
+			<label>Substâncias ou Familiar</label>
+			<textarea name="substancias" class="inputGrande" placeholder="DQ/Adolescente: substâncias separadas por vírgula
+Familiar: nome completo do familiar"><?php echo $substancias; ?></textarea><br />
 
 			<label>CIDs</label>
 			<input type="text" name="cidp" value="<?php echo $cidp; ?>" placeholder="Primário"><input type="text" name="cids" value="<?php echo $cids; ?>" placeholder="Secundário"><br />

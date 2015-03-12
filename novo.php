@@ -78,8 +78,9 @@
 				<option>Familiar</option>
 			</select><!--demanda--><br />
 
-			<label>Substâncias</label>
-			<textarea name="substancias" class="inputGrande" placeholder="Separe os nomes das substâncias por vírgulas"></textarea><br />
+			<label>Substâncias ou Familiar</label>
+			<textarea name="substancias" class="inputGrande"placeholder="DQ/Adolescente: substâncias separadas por vírgula
+Familiar: nome completo do familiar"></textarea><br />
 
 			<label>CIDs</label>
 			<input type="text" name="cidp" placeholder="Primário"><input type="text" name="cids" placeholder="Secundário"><br />

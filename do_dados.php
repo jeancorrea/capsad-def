@@ -107,7 +107,7 @@ while ($linha = mysql_fetch_array($busca)) {
 		<td colspan=3></td>
 	</tr>
 	<tr>
-		<th>Substâncias</th>
+		<th><?php if ($demanda == 'Familiar') {echo "Familiar";} else {echo "Substâncias";} ?></th>
 		<th colspan=2>CIDs</th>
 	</tr>
 	<tr>
