@@ -1,5 +1,13 @@
 <?php include "header.php"; ?>
 
+<script>
+jQuery(function($){
+$("#data").mask("99/99/9999");
+$("#campoTelefone").mask("(999) 999-9999");
+$("#campoSenha").mask("***-****");
+});
+</script>
+
 <h1>Novo procedimento</h1>
 
 <form action="do_proced.php" method="POST" id="proced">
@@ -77,7 +85,7 @@
 		<textarea name="outros" class="inputLongo"></textarea><br />
 
 		<label>Data</label>
-		<input type="text" name="dp_d" class="data"> / <input type="text" name="dp_m" class="data"> / <input type="text" name="dp_a" class="data"><br />
+		<input type="text" name="data" class="datacomp" id="data" required><br />
 
 		<label>Pacientes</label>
 		<select name="pacientes" id="s1" onKeyPress="return insereTexto(event)">
