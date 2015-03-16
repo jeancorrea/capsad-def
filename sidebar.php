@@ -14,5 +14,6 @@
 		<li><a href="http://localhost/phpmyadmin" target="_BLANK">phpMyAdmin</a></li>
 		<li><a href="http://sistemas.macae.rj.gov.br:82/apps/oficiodigital/default.asp" target="_BLANK">Ofício Digital</a></li>
 		<li><a href="https://cadastro.saude.gov.br/cadsusweb/login.jsp" target="_BLANK">CadWeb DataSUS</li>
+		<li><a href="http://www.receita.fazenda.gov.br/Aplicacoes/ATCTA/CPF/ConsultaPublica.asp" target="_BLANK">Consulta CPF</a></li>
 	</ul>
 </div><!--menubar-->
