@@ -11,7 +11,7 @@ if(empty($df)) {
 
 	?>
 
-<table class="resultado">
+<table class="resultado" id="printable">
 	<tr>
 		<th colspan=5 style="font-size:2em;">Pacientes atendidos em <?php echo $di; ?></th>
 	</tr>
@@ -70,7 +70,7 @@ if(empty($df)) {
 
 	?>
 
-<table class="resultado">
+<table class="resultado" id="printable">
 	<tr>
 		<th colspan=5 style="font-size:1.5em;">Pacientes atendidos de <?php echo $di; ?> a <?php echo $df; ?></th>
 	</tr>

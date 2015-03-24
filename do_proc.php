@@ -10,7 +10,7 @@ $di = $_POST['di'];
 $df = $_POST['df'];
 
 ?>
-
+<div id="printable">
 <table class="resultado">
 	<tr>
 		<th colspan=3 style="font-size:2em;"><?php echo $proc; ?></th>
@@ -103,5 +103,5 @@ $quantidade = $row['quantidade'];
 ?>
 
 </table><!--resultado-->
-
+</div><!--printable-->
 <?php include "footer.php"; ?>

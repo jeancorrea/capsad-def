@@ -15,7 +15,7 @@ while ($linha = mysql_fetch_array($busca)) {
 	$cns = $linha['cns'];
 
 ?>
-
+<div id="printable">
 <table class="resultado">
 	<tr>
 		<th colspan=2 style="font-size:2em;"><?php echo $nome; ?></th>
@@ -158,5 +158,5 @@ while ($linha = mysql_fetch_array($proc)) {
 ?>
 
 </table><!--resultado-->
-
+</div><!--printable-->
 <?php include "footer.php"; ?>

@@ -38,7 +38,7 @@ while ($linha = mysql_fetch_array($busca)) {
 	$status = $linha['status'];
 
 ?>
-
+<div id="printable">
 <table class="resultado">
 	<tr>
 		<th colspan=2 style="font-size:2em;"><?php echo $nome; ?></th>
@@ -128,6 +128,7 @@ while ($linha = mysql_fetch_array($busca)) {
 		<td colspan=3><em><strong>CAPSad Porto</strong><br />Secretaria Municipal Especial de Saúde - PREFEITURA MUNICIPAL DE MACAÉ</em></td>
 	</tr>
 </table><!--resultado-->
+</div><!--printable-->
 
 <?php
 

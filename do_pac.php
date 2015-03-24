@@ -1,5 +1,5 @@
 <?php include "header.php"; ?>
-
+<div id="printable">
 <?php
 
 //Variáveis POST
@@ -98,6 +98,7 @@ if (empty($df)) {
 }
 
 ?>
-</table>
+</table><!--resultado-->
+</div><!--printable-->
 
 <?php include "footer.php"; ?>
