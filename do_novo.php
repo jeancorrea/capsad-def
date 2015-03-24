@@ -4,9 +4,9 @@
 
 //Definição de variáveis POST
 $nome = $_POST['nome'];
-$dn_d = $_POST['dn_d'];
-$dn_m = $_POST['dn_m'];
-$dn_a = $_POST['dn_a'];
+$dn = $_POST['dn'];
+$exn = explode("/", $dn);
+$datan = $exn[2]."-".$exn[1]."-".$exn[0];
 $genero = $_POST['genero'];
 $endereco = $_POST['endereco'];
 $cep = $_POST['cep'];
@@ -18,9 +18,9 @@ $pai = $_POST['pai'];
 $mae = $_POST['mae'];
 $rg = $_POST['rg'];
 $orgaorg = $_POST['orgaorg'];
-$de_d = $_POST['de_d'];
-$de_m = $_POST['de_m'];
-$de_a = $_POST['de_a'];
+$de = $_POST['de'];
+$exe = explode("/", $de);
+$datae = $exe[2]."-".$exe[1]."-".$exe[0];
 $cpf = $_POST['cpf'];
 $cns = $_POST['cns'];
 $certidao = $_POST['certidao'];
@@ -29,9 +29,9 @@ $cidp = $_POST['cidp'];
 $cids = $_POST['cids'];
 $substancias = $_POST['substancias'];
 $status = $_POST['status'];
-$di_d = $_POST['di_d'];
-$di_m = $_POST['di_m'];
-$di_a = $_POST['di_a'];
+$di = $_POST['di'];
+$exi = explode("/", $di);
+$datai = $exi[2]."-".$exi[1]."-".$exi[0];
 
 //Replaces para corrigir apóstrofo
 $nome = str_replace("'","\\'",$nome);
@@ -43,14 +43,10 @@ $mae = str_replace("'","\\'",$mae);
 $substancias = str_replace("'","\\'",$substancias);
 $status = str_replace("'","\\'",$status);
 
-//Concatenação para formar variáveis de datas
-$dn = $dn_a.'-'.$dn_m.'-'.$dn_d;
-$emissaorg = $de_a.'-'.$de_m.'-'.$de_d;
-$inicio = $di_a.'-'.$di_m.'-'.$di_d;
 
 //Query de inserção no banco de dados
 $sql = mysql_query("INSERT INTO pacientes (nome, dn, genero, endereco, cep, cidade, naturalidade, escola, telefones, pai, mae, rg, orgaorg, emissaorg, cpf, cns, certidao, demanda, cidp, cids, substancias, status, inicio)
-	VALUES ('$nome', '$dn', '$genero', '$endereco', '$cep', '$cidade', '$naturalidade', '$escola', '$telefones', '$pai', '$mae', '$rg', '$orgaorg', '$emissaorg', '$cpf', '$cns', '$certidao', '$demanda', '$cidp', '$cids', '$substancias', '$status', '$inicio')");
+	VALUES ('$nome', '$datan', '$genero', '$endereco', '$cep', '$cidade', '$naturalidade', '$escola', '$telefones', '$pai', '$mae', '$rg', '$orgaorg', '$datae', '$cpf', '$cns', '$certidao', '$demanda', '$cidp', '$cids', '$substancias', '$status', '$datai')");
 if ($sql == true) {
 	echo "<h2>Dados cadastrados com sucesso!</h2>";
 	echo "<br />";

@@ -1,5 +1,15 @@
 <?php include "header.php"; ?>
 
+<script>
+jQuery(function($){
+$("#dn").mask("99/99/9999");
+$("#de").mask("99/99/9999");
+$("#di").mask("99/99/9999");
+$("#campoTelefone").mask("(999) 999-9999");
+$("#campoSenha").mask("***-****");
+});
+</script>
+
 	<h1>Novo paciente</h1>
 
 	<form action="do_novo.php" method="POST" id="novo">
@@ -9,7 +19,7 @@
 			<input type="text" name="nome" class="inputNome" autofocus><br />
 
 			<label>Data de nascimento</label>
-			<input type="text" name="dn_d" class="data"> / <input type="text" name="dn_m" class="data"> / <input type="text" name="dn_a" class="data"><br />
+			<input type="text" name="dn" class="datacomp" id="dn"><br />
 
 			<label>Gênero</label>
 			<select name="genero" class="inputPequeno">
@@ -56,7 +66,7 @@
 		<fieldset>
 		<legend>Documentação</legend>
 			<label>Identidade</label>
-			<input type="text" name="rg" class="inputMenor" placeholder="Número"><input type="text" name="orgaorg" class="inputMenor" placeholder="Órgão expedidor"><input type="text" name="de_d" class="data" placeholder="Data"> / <input type="text" name="de_m" class="data" placeholder="de"> / <input type="text" class="data" name="de_a" placeholder="emissão"><br />
+			<input type="text" name="rg" class="inputMenor" placeholder="Número"><input type="text" name="orgaorg" class="inputMenor" placeholder="Órgão expedidor"><input type="text" name="de" class="datacomp" id="de"><br />
 
 			<label>CPF</label>
 			<input type="text" name="cpf" class="inputPequeno"><br />
@@ -93,7 +103,7 @@ Familiar: nome completo do familiar"></textarea><br />
 			</select><!--status--><br />
 
 			<label>Início do tratamento</label>
-			<input type="text" name="di_d" class="data"> / <input type="text" name="di_m" class="data"> / <input type="text" name="di_a" class="data"><br />
+			<input type="text" name="di" class="datacomp" id="di"><br />
 		</fieldset>
 
 		<fieldset class="buttons">
