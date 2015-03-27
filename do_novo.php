@@ -5,8 +5,14 @@
 //Definição de variáveis POST
 $nome = $_POST['nome'];
 $dn = $_POST['dn'];
-$exn = explode("/", $dn);
-$datan = $exn[2]."-".$exn[1]."-".$exn[0];
+
+if (empty($dn)) {
+	$datan = "0000-00-00";
+} else {
+	$exn = explode("/", $dn);
+	$datan = $exn[2]."-".$exn[1]."-".$exn[0];
+}
+
 $genero = $_POST['genero'];
 $endereco = $_POST['endereco'];
 $cep = $_POST['cep'];
@@ -19,8 +25,14 @@ $mae = $_POST['mae'];
 $rg = $_POST['rg'];
 $orgaorg = $_POST['orgaorg'];
 $de = $_POST['de'];
-$exe = explode("/", $de);
-$datae = $exe[2]."-".$exe[1]."-".$exe[0];
+
+if (empty($de)) {
+	$datae = "0000-00-00";
+} else {
+	$exe = explode("/", $de);
+	$datae = $exe[2]."-".$exe[1]."-".$exe[0];
+}
+
 $cpf = $_POST['cpf'];
 $cns = $_POST['cns'];
 $certidao = $_POST['certidao'];
@@ -30,8 +42,13 @@ $cids = $_POST['cids'];
 $substancias = $_POST['substancias'];
 $status = $_POST['status'];
 $di = $_POST['di'];
-$exi = explode("/", $di);
-$datai = $exi[2]."-".$exi[1]."-".$exi[0];
+
+if (empty($di)) {
+	$datai = "0000-00-00";
+} else {
+	$exi = explode("/", $di);
+	$datai = $exi[2]."-".$exi[1]."-".$exi[0];
+}
 
 //Replaces para corrigir apóstrofo
 $nome = str_replace("'","\\'",$nome);

@@ -7,9 +7,15 @@ $antid = $_POST['antid'];
 //Definição de variáveis POST
 $nome = $_POST['nome'];
 $id = $_POST['id'];
-$dn_d = $_POST['dn_d'];
-$dn_m = $_POST['dn_m'];
-$dn_a = $_POST['dn_a'];
+$dn = $_POST['dn'];
+
+if (empty($dn)) {
+	$datan = "0000-00-00";
+} else {
+	$exn = explode("/", $dn);
+	$datan = $exn[2]."-".$exn[1]."-".$exn[0];
+}
+
 $genero = $_POST['genero'];
 $endereco = $_POST['endereco'];
 $cep = $_POST['cep'];
@@ -21,9 +27,15 @@ $pai = $_POST['pai'];
 $mae = $_POST['mae'];
 $rg = $_POST['rg'];
 $orgaorg = $_POST['orgaorg'];
-$de_d = $_POST['de_d'];
-$de_m = $_POST['de_m'];
-$de_a = $_POST['de_a'];
+$de = $_POST['de'];
+
+if (empty($de)) {
+	$datae = "0000-00-00";
+} else {
+	$exe = explode("/", $de);
+	$datae = $exe[2]."-".$exe[1]."-".$exe[0];
+}
+
 $cpf = $_POST['cpf'];
 $cns = $_POST['cns'];
 $certidao = $_POST['certidao'];
@@ -32,9 +44,14 @@ $cidp = $_POST['cidp'];
 $cids = $_POST['cids'];
 $substancias = $_POST['substancias'];
 $status = $_POST['status'];
-$di_d = $_POST['di_d'];
-$di_m = $_POST['di_m'];
-$di_a = $_POST['di_a'];
+$di = $_POST['di'];
+
+if (empty($di)) {
+	$datai = "0000-00-00";
+} else {
+	$exi = explode("/", $di);
+	$datai = $exi[2]."-".$exi[1]."-".$exi[0];
+}
 
 //Replaces para corrigir apóstrofo
 $nome = str_replace("'","\\'",$nome);
@@ -46,12 +63,8 @@ $mae = str_replace("'","\\'",$mae);
 $substancias = str_replace("'","\\'",$substancias);
 $status = str_replace("'","\\'",$status);
 
-//Concatenação para formar variáveis de datas
-$dn = $dn_a.'-'.$dn_m.'-'.$dn_d;
-$emissaorg = $de_a.'-'.$de_m.'-'.$de_d;
-$inicio = $di_a.'-'.$di_m.'-'.$di_d;
 
-$cod1 = mysql_query("UPDATE pacientes SET id = '$id', nome = '$nome', dn = '$dn', genero = '$genero', endereco = '$endereco', cep = '$cep', cidade = '$cidade', escola = '$escola', telefones = '$telefones', pai = '$pai', mae = '$mae', cns = '$cns', rg = '$rg', orgaorg = '$orgaorg', emissaorg = '$emissaorg', cpf = '$cpf', naturalidade = '$naturalidade', certidao = '$certidao', demanda = '$demanda', substancias = '$substancias', cidp = '$cidp', cids = '$cids', inicio = '$inicio', status = '$status' WHERE id = '$antid' AND nome = '$antnome'");
+$cod1 = mysql_query("UPDATE pacientes SET id = '$id', nome = '$nome', dn = '$datan', genero = '$genero', endereco = '$endereco', cep = '$cep', cidade = '$cidade', escola = '$escola', telefones = '$telefones', pai = '$pai', mae = '$mae', cns = '$cns', rg = '$rg', orgaorg = '$orgaorg', emissaorg = '$datae', cpf = '$cpf', naturalidade = '$naturalidade', certidao = '$certidao', demanda = '$demanda', substancias = '$substancias', cidp = '$cidp', cids = '$cids', inicio = '$datai', status = '$status' WHERE id = '$antid' AND nome = '$antnome'");
 
 $cod2 = mysql_query("UPDATE atendimentos SET paciente = '$nome-$id' WHERE paciente = '$antnome-$antid'");
 

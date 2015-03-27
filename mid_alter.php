@@ -1,5 +1,15 @@
 <?php include "header.php"; ?>
 
+<script>
+jQuery(function($){
+$("#dn").mask("99/99/9999");
+$("#de").mask("99/99/9999");
+$("#di").mask("99/99/9999");
+$("#campoTelefone").mask("(999) 999-9999");
+$("#campoSenha").mask("***-****");
+});
+</script>
+
 <?php
 
 $paciente = $_POST['paciente'];
@@ -59,7 +69,7 @@ while ($linha = mysql_fetch_array($sql)) {
 			<input type="text" name="id" value="<?php echo $id; ?>"><br />
 
 			<label>Data de nascimento</label>
-			<input type="text" name="dn_d" class="data" value="<?php echo $datanasc[2]; ?>"> / <input type="text" name="dn_m" class="data" value="<?php echo $datanasc[1]; ?>"> / <input type="text" name="dn_a" class="data" value="<?php echo $datanasc[0]; ?>"><br />
+			<input type="text" name="dn" class="datacomp" id="dn" value="<?php echo $datanasc[2].'/'.$datanasc[1].'/'.$datanasc[0]; ?>"><br />
 
 			<label>Gênero</label>
 			<select name="genero" class="inputPequeno">
@@ -106,7 +116,7 @@ while ($linha = mysql_fetch_array($sql)) {
 		<fieldset>
 		<legend>Documentação</legend>
 			<label>Identidade</label>
-			<input type="text" name="rg" class="inputMenor" value="<?php echo $rg; ?>" placeholder="Número"><input type="text" name="orgaorg" class="inputMenor" value="<?php echo $orgaorg; ?>" placeholder="Órgão expedidor"><input type="text" name="de_d" class="data" value="<?php echo $dataemissao[2]; ?>" placeholder="Data"> / <input type="text" name="de_m" class="data" value="<?php echo $dataemissao[1]; ?>" placeholder="de"> / <input type="text" class="data" name="de_a" value="<?php echo $dataemissao[0]; ?>" placeholder="emissão"><br />
+			<input type="text" name="rg" class="inputMenor" value="<?php echo $rg; ?>" placeholder="Número"><input type="text" name="orgaorg" class="inputMenor" value="<?php echo $orgaorg; ?>" placeholder="Órgão expedidor"><input type="text" name="de" class="datacomp" id="de" placeholder="Data de emissão" value="<?php echo $dataemissao[2].'/'.$dataemissao[1].'/'.$dataemissao[0]; ?>"><br />
 
 			<label>CPF</label>
 			<input type="text" name="cpf" class="inputPequeno" value="<?php echo $cpf; ?>"><br />
@@ -143,7 +153,7 @@ Familiar: nome completo do familiar"><?php echo $substancias; ?></textarea><br /
 			</select><!--status--><br />
 
 			<label>Início do tratamento</label>
-			<input type="text" name="di_d" value="<?php echo $datainicio[2]; ?>" class="data"> / <input type="text" name="di_m" value="<?php echo $datainicio[1]; ?>" class="data"> / <input type="text" name="di_a" value="<?php echo $datainicio[0]; ?>" class="data"><br />
+			<input type="text" name="di" class="datacomp" id="di" value="<?php echo $datainicio[2].'/'.$datainicio[1].'/'.$datainicio[0]; ?>"><br />
 		</fieldset>
 
 <?php } ?>

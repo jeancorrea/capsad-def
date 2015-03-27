@@ -66,7 +66,7 @@ $("#campoSenha").mask("***-****");
 		<fieldset>
 		<legend>Documentação</legend>
 			<label>Identidade</label>
-			<input type="text" name="rg" class="inputMenor" placeholder="Número"><input type="text" name="orgaorg" class="inputMenor" placeholder="Órgão expedidor"><input type="text" name="de" class="datacomp" id="de"><br />
+			<input type="text" name="rg" class="inputMenor" placeholder="Número"><input type="text" name="orgaorg" class="inputMenor" placeholder="Órgão expedidor"><input type="text" name="de" class="datacomp" id="de" placeholder="Data de emissão"><br />
 
 			<label>CPF</label>
 			<input type="text" name="cpf" class="inputPequeno"><br />
