@@ -18,6 +18,7 @@ while ($linha = mysql_fetch_array($busca)) {
 	$inicio = $linha['inicio'];
 	$substancias = $linha['substancias'];
 	$idade = $linha['idade'];
+	$demanda = $linha['demanda'];
 
 	echo "<table class='resultado'>";
 	echo "<tr>";
@@ -35,7 +36,7 @@ while ($linha = mysql_fetch_array($busca)) {
 	echo "<td>".date('d/m/Y', strtotime($inicio))."</td>";
 	echo "</tr>";
 	echo "<tr>";
-	echo "<td colspan=3>Substâncias: ".$substancias."</td>";
+	if ($demanda == 'Familiar') {echo "<td colspan=3>Familiar: ".$substancias."</td>";} else {echo "<td colspan=3>Substâncias: ".$substancias."</td>";}
 	echo "</tr>";
 	echo "</table><!--resultado-->";
 	echo "<br />";
